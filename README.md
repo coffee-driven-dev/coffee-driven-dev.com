@@ -1,2 +1,3 @@
 # coffee-driven-dev.com
-Marketing Website; Hey-O!
+
+The source code for the coffee_driven_dev website.

@@ -1,0 +1,13 @@
+{
+  "name": "coffee-driven-dev.com",
+  "version": "1.0.0",
+  "description": "Static website for coffee_driven_dev twitch streams",
+  "main": "index.js",
+  "repository": "https://github.com/coffee-driven-dev/coffee-driven-dev.com.git",
+  "author": "dannyrb <danny.ri.brown@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+	  "dev": "vuepress dev src",
+	  "build": "vuepress build src"
+  }
+}
