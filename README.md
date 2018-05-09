@@ -1,6 +1,14 @@
-# coffee-driven-dev.com
+<h1 align="center">
+	<img alt="coffee_driven_dev" src="https://placehold.it/200" />
+	<br>
+	coffee-driven-dev.com
+	<br>
+</h1>
+<p align="center" style="font-size: 1.2em;">
+	The source code for the coffee_driven_dev website.
+</p>
 
-The source code for the coffee_driven_dev website.
+[![CircleCI](https://circleci.com/gh/coffee-driven-dev/coffee-driven-dev.com.svg?style=svg)](https://circleci.com/gh/coffee-driven-dev/coffee-driven-dev.com)
 
 ## Getting Started
 
