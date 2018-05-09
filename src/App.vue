@@ -2,9 +2,7 @@
   <div id="app">
 
 	<!-- NAV -->
-	<div class="blue">
-		<cdd-top-bar />
-	</div>
+	<cdd-top-bar :collapsed="isNavCollapsed" />
 
 	<!-- PAGE -->
 	<!-- <cdd-app-navigation /> -->
@@ -19,6 +17,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import CddAppNavigation from "./components/AppNavigation.vue";
 import CddTopBar from "./components/TopBar.vue";
 import CddFooter from "@components/Footer.vue";
@@ -29,6 +28,14 @@ export default {
     CddAppNavigation,
     CddTopBar,
     CddFooter
+  },
+  computed: {
+    ...mapState({
+      activePage: state => state.page
+    }),
+    isNavCollapsed() {
+      return this.activePage !== "home";
+    }
   }
 };
 </script>
@@ -40,7 +47,7 @@ export default {
 @import "~@styles/_fonts.scss";
 
 body {
-  background: #f7f7f7;
+  background: $background;
   color: #5c5c5c;
 }
 
@@ -49,13 +56,6 @@ body {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.blue {
-  background: $blue;
-
-  padding-bottom: 150px;
-  width: 100%;
 }
 
 .page-enter-active {
