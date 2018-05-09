@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.2843bb986fcbd6503c97302d96c72661.js"
+  "/precache-manifest.6915d0c1e5f1612982f2563ceb82e16e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "cdd.coffee"});
