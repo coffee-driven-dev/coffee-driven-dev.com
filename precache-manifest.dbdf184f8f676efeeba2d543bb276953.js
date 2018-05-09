@@ -12,11 +12,15 @@ self.__precacheManifest = [
     "url": "/js/app.a8fb0208.js"
   },
   {
-    "revision": "7ca0ae82e5c856165110c183faedf52d",
+    "revision": "4672ce225dccf94d2e3ed479b153ef93",
     "url": "/index.html"
   },
   {
     "revision": "a8fb0208e141fbc372af",
     "url": "/css/app.96a50985.css"
+  },
+  {
+    "revision": "dd3fb19d328afed70006bbb29a4cb994",
+    "url": "/CNAME"
   }
 ];
