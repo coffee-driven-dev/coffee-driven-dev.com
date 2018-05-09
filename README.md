@@ -13,7 +13,6 @@
 
 [![CircleCI][circle-ci-badge]][circle-ci]
 [![Code Coverage][coverage-badge]][coverage]
-[![All Contributors](https://img.shields.io/badge/all_contributors-64-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs]
 
 ## Getting Started
