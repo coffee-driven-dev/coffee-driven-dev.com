@@ -35,9 +35,25 @@ jobs:
         
       # run tests!
       - run: yarn test
-
+  
   deploy:
-	production:
-	  branch: master
-	    commands:
-		  - ./scripts/deploy-ghpages.sh build
+    machine:
+	  enabled: true
+	working_directory: ~/repo/dist
+	steps:
+	  - checkout
+	  - run: yarn install
+	  - run: 
+		command: bash ./scripts/deploy-ghpages.sh build
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
