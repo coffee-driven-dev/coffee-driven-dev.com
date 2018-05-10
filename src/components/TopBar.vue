@@ -2,10 +2,12 @@
 	<div class="blue" :class="{ collapsed: collapsed }">
 		<nav class="container">
 			<cdd-row>
-				<div class="brand">
-					<img src="https://placehold.it/50x50" />
-					<span>coffee_driven_dev</span>
-				</div>
+				<router-link to="/">
+					<div class="brand">
+						<img src="https://placehold.it/50x50" />
+						<cdd-logo-text style="margin-left: 12px; margin-top: 8px;" height="35" />
+					</div>
+				</router-link>
 				<div class="navigation">
 					<router-link to="about">About Us</router-link>
 					<a href="https://www.twitch.tv/dannyrbrown" class="primary">Follow Us</a>
@@ -29,11 +31,13 @@
 <script>
 import CddTwitchPlayer from "@components/TwitchPlayer.vue";
 import CddRow from "@components/Row.vue";
+import CddLogoText from "@components/LogoText.vue";
 
 export default {
   name: "TopBar",
   components: {
     CddRow,
+    CddLogoText,
     CddTwitchPlayer
   },
   props: {
