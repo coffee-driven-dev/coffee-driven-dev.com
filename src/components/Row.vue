@@ -28,7 +28,6 @@ export default {
 @media (max-width: $SM) {
   .row {
     width: map-get($breakpoints, sm);
-    padding: 0 30px;
   }
 }
 </style>
