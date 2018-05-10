@@ -20,8 +20,16 @@ export default {
   // Because content may need to touch edges, but
   // rarely ever need to touch top/bottom
   padding: 30px 0;
-  width: map-get($breakpoints, lg);
   background: #fff;
+  width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: $SM) {
+  .card {
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+  }
 }
 </style>
