@@ -60,9 +60,10 @@ export default {
   background: $primary;
   padding-bottom: 150px;
   width: 100%;
-  max-height: 9999px;
+  overflow: hidden;
+  max-height: 600px;
 
-  transition-delay: 2s;
+  transition-delay: 0.15s;
   transition-duration: 0.3s;
   transition-property: max-height, padding-bottom;
   transition-timing-function: ease-in-out;
