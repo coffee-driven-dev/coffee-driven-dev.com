@@ -15,6 +15,7 @@ export default {
 
 .row {
   display: flex;
+  padding: 0 30px;
   margin: 0 auto;
   width: map-get($breakpoints, lg);
 }
