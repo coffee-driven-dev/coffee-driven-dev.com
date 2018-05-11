@@ -8,7 +8,7 @@
 
 		<!-- HERO CTA -->
 		<transition name="fade">
-			<cdd-row v-if="!isNavCollapsed" style="justify-content: space-between; flex-wrap: wrap;">
+			<cdd-row v-if="!isNavCollapsed" class="magic">
 				<div class="hero-container">
 					<h1 style="margin: 10px 0; color: #FFF; font-size: 33px;">Community. Lorem Ipsum. Education. Fun!</h1>
 				</div>
@@ -115,19 +115,31 @@ body {
   }
 }
 
-.hero-container {
-  width: 50%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+/* Stacked layout at $SM */
+.magic {
+  justify-content: space-between;
+  @media (max-width: $SM) {
+    flex-wrap: wrap;
+  }
 }
 
-.graphic-container {
-  align-items: flex-end;
-  min-width: 400px; // Vid player min
-  width: 37.5%;
+// On Mobile
+// Reverse order, video first, then subscribe
+.hero-container {
   display: flex;
-  flex-direction: column;
+  flex-grow: 1;
+
+  h1 {
+    display: inline;
+  }
+}
+
+// Make video larger
+.graphic-container {
+  display: flex;
+  flex-grow: 1;
+
+  width: 400px; // Vid player min
   margin: 25px 0 10px 0;
 }
 
