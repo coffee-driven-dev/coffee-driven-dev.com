@@ -34,7 +34,7 @@
 
 <script>
 import { mapState } from "vuex";
-import CddAppNavigation from "./components/AppNavigation.vue";
+import CddRow from "@components/Row.vue";
 import CddTopBar from "./components/TopBar.vue";
 import CddTwitchPlayer from "@components/TwitchPlayer.vue";
 import CddFooter from "@components/Footer.vue";
@@ -42,7 +42,7 @@ import CddFooter from "@components/Footer.vue";
 export default {
   name: "App",
   components: {
-    CddAppNavigation,
+    CddRow,
     CddTopBar,
     CddTwitchPlayer,
     CddFooter
@@ -83,10 +83,12 @@ body {
 */
 .page-enter-active {
   transition: opacity 0.25s ease-out;
+  transition-delay: 0.3s;
 }
 
 .page-leave-active {
   transition: opacity 0.25s ease-in;
+  transition-delay: 0.3s;
 }
 
 .page-enter,
@@ -100,10 +102,9 @@ body {
   padding-bottom: 150px;
   width: 100%;
   overflow: hidden;
-  max-height: 600px;
+  max-height: 900px;
 
-  transition-delay: 0.15s;
-  transition-duration: 0.3s;
+  transition-duration: 0.55s;
   transition-property: max-height, padding-bottom;
   transition-timing-function: ease-in-out;
 
