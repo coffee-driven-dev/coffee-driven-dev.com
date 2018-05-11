@@ -1,5 +1,7 @@
 <h1 align="center">
-	<img alt="coffee_driven_dev" src="https://placehold.it/200" />
+	<!-- -->
+	![cdd logo](GitHub-Project-Logo.png?raw=true "Cdd Logo")
+	<!-- -->
 	<br>
 	coffee-driven-dev.com
 	<br>
