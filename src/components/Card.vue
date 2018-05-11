@@ -28,8 +28,12 @@ export default {
 @media (max-width: $SM) {
   .card {
     border-radius: 0;
-    width: 100%;
+    width: calc(100% + #{$row-padding} + #{$row-padding});
     box-shadow: none;
+
+    // Stretch to edges
+    margin-left: -$row-padding;
+    margin-right: -$row-padding;
   }
 }
 </style>
