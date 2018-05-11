@@ -1,50 +1,31 @@
 <template>
-	<div class="blue" :class="{ collapsed: collapsed }">
-		<nav class="container">
-			<cdd-row>
-				<router-link to="/">
-					<div class="brand">
-						<img src="https://placehold.it/50x50" />
-						<cdd-logo-text style="margin-left: 12px; margin-top: 8px;" height="35" />
-					</div>
-				</router-link>
-				<div class="navigation">
-					<router-link to="about">About Us</router-link>
-					<a href="https://www.twitch.tv/dannyrbrown" class="primary">Follow Us</a>
+	<nav>
+		<cdd-row>
+			<router-link to="/">
+				<div class="brand">
+					<cdd-logo fill-start="#FFF" fill-end="#FFF" height="60" />
+					<cdd-logo-text class="logo-text" height="35" />
 				</div>
-			</cdd-row>
-			<transition name="fade">
-				<cdd-row v-if="!collapsed" style="justify-content: space-between">
-					<div class="hero-container">
-						<h1 style="margin: 10px 0; color: #FFF; font-size: 33px;">Community. Lorem Ipsum. Education. Fun!</h1>
-					</div>
-					<div class="graphic-container">
-						<cdd-twitch-player />
-
-					</div>
-				</cdd-row>
-			</transition>
-		</nav>
-	</div>
+			</router-link>
+			<div class="menu">
+				<router-link to="about">About Us</router-link>
+				<a href="https://www.twitch.tv/dannyrbrown" class="primary">Follow Us</a>
+			</div>
+		</cdd-row>
+	</nav>
 </template>
 
 <script>
-import CddTwitchPlayer from "@components/TwitchPlayer.vue";
 import CddRow from "@components/Row.vue";
-import CddLogoText from "@components/LogoText.vue";
+import CddLogo from "@components/svgs/Logo.vue";
+import CddLogoText from "@components/svgs/LogoText.vue";
 
 export default {
   name: "TopBar",
   components: {
     CddRow,
-    CddLogoText,
-    CddTwitchPlayer
-  },
-  props: {
-    collapsed: {
-      type: Boolean,
-      required: true
-    }
+    CddLogo,
+    CddLogoText
   }
 };
 </script>
@@ -52,34 +33,8 @@ export default {
 <style lang="scss" scoped>
 @import "~@styles/_global.scss";
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
-.blue {
-  background: $primary;
-  padding-bottom: 150px;
-  width: 100%;
-  overflow: hidden;
-  max-height: 600px;
-
-  transition-delay: 0.15s;
-  transition-duration: 0.3s;
-  transition-property: max-height, padding-bottom;
-  transition-timing-function: ease-in-out;
-
-  &.collapsed {
-    overflow: hidden;
-    max-height: 75px;
-    padding-bottom: 0;
-  }
-}
-
-.container {
+// Container
+nav {
   background-color: $primary;
   margin-bottom: 30px;
   position: sticky;
@@ -92,37 +47,25 @@ export default {
   }
 }
 
-.hero-container {
-  width: 50%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.graphic-container {
-  align-items: flex-end;
-  width: 37.5%;
-  display: flex;
-  flex-direction: column;
-  margin: 25px 0 10px 0;
-}
-
+// Logo/Brand
 .brand {
   display: flex;
   margin-top: 10px;
 
-  // Replace with SVG
-  span {
-    display: flex;
-    margin-left: 15px;
-    font-size: 28px;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  .logo-text {
+    margin-left: 5px;
+    margin-top: 8px;
   }
 }
 
-.navigation {
+@media (max-width: $SM) {
+  .logo-text {
+    display: none;
+  }
+}
+
+// Menu
+.menu {
   height: 60px;
   display: flex;
   justify-content: flex-end;
