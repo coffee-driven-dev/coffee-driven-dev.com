@@ -5,7 +5,7 @@
 	<br>
 </h1>
 <p align="center" style="font-size: 1.2em;">
-	The source code for the coffee_driven_dev website.
+	The source code for the [coffee_driven_dev](https://www.coffee-driven-dev.com) website.
 </p>
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
