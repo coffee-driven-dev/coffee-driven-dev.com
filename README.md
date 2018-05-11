@@ -1,6 +1,6 @@
 <h1 align="center">
 	<!-- -->
-	![cdd logo](GitHub-Project-Logo.png?raw=true "Cdd Logo")
+	![cdd logo](https://raw.githubusercontent.com/coffee-driven-dev/coffee-driven-dev.com/master/GitHub-Project-Logo.png)
 	<!-- -->
 	<br>
 	coffee-driven-dev.com
