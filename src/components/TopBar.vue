@@ -4,7 +4,7 @@
 			<router-link to="/">
 				<div class="brand">
 					<cdd-logo fill-start="#FFF" fill-end="#FFF" height="60" />
-					<cdd-logo-text class="logo-text" height="35" />
+					<cdd-logo-text class="logo-text" :height="35" />
 				</div>
 			</router-link>
 			<div class="menu">
@@ -58,7 +58,7 @@ nav {
   }
 }
 
-@media (max-width: $SM) {
+@media (max-width: $XS) {
   .logo-text {
     display: none;
   }

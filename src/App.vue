@@ -10,11 +10,13 @@
 		<transition name="fade">
 			<cdd-row v-if="!isNavCollapsed" class="magic">
 				<div class="hero-container">
-					<h1 style="margin: 10px 0; color: #FFF; font-size: 33px;">Community. Lorem Ipsum. Education. Fun!</h1>
+					<h1 style="margin: 10px 0; color: #FFF; font-size: 27px; line-height: 60px;">
+						Live social coding; join the 💬, level up your 💻, sip a bit of ☕ 
+					</h1>
+					<cdd-tiny-letter-form />
 				</div>
 				<div class="graphic-container">
 					<cdd-twitch-player />
-
 				</div>
 			</cdd-row>
 		</transition>
@@ -35,7 +37,8 @@
 <script>
 import { mapState } from "vuex";
 import CddRow from "@components/Row.vue";
-import CddTopBar from "./components/TopBar.vue";
+import CddTinyLetterForm from "@components/TinyLetterForm.vue";
+import CddTopBar from "@components/TopBar.vue";
 import CddTwitchPlayer from "@components/TwitchPlayer.vue";
 import CddFooter from "@components/Footer.vue";
 
@@ -45,6 +48,7 @@ export default {
     CddRow,
     CddTopBar,
     CddTwitchPlayer,
+    CddTinyLetterForm,
     CddFooter
   },
   computed: {
@@ -67,7 +71,7 @@ export default {
 body {
   background: $background;
   color: #5c5c5c;
-  min-width: 350px;
+  min-width: 350px; // TODO: Re-evaluate. Can we do 420?
   overflow-x: hidden;
 }
 
@@ -118,8 +122,12 @@ body {
 /* Stacked layout at $SM */
 .magic {
   justify-content: space-between;
+
   @media (max-width: $SM) {
     flex-wrap: wrap;
+    // Center when we snap to column
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -127,7 +135,13 @@ body {
 // Reverse order, video first, then subscribe
 .hero-container {
   display: flex;
+  max-width: 450px;
   flex-grow: 1;
+
+  // effects children
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 
   h1 {
     display: inline;
@@ -139,7 +153,7 @@ body {
   display: flex;
   flex-grow: 1;
 
-  width: 400px; // Vid player min
+  max-width: 400px; // Vid player min
   margin: 25px 0 10px 0;
 }
 
