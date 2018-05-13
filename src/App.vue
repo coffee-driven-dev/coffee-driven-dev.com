@@ -71,7 +71,7 @@ export default {
 body {
   background: $background;
   color: #5c5c5c;
-  min-width: 350px; // TODO: Re-evaluate. Can we do 420?
+  min-width: 400px; // TODO: Re-evaluate. Can we do 420?
   overflow-x: hidden;
 }
 
@@ -152,9 +152,15 @@ body {
 .graphic-container {
   display: flex;
   flex-grow: 1;
-
-  max-width: 400px; // Vid player min
+  height: 300px;
+  max-width: 400px;
   margin: 25px 0 10px 0;
+
+  @media (max-width: $SM) {
+    flex-grow: 1;
+    max-height: 400px;
+    max-width: 550px;
+  }
 }
 
 .fade-enter-active,

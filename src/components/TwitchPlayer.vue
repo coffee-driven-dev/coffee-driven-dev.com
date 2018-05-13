@@ -1,5 +1,5 @@
 <template>
-	<div id="twitch-player">
+	<div id="twitch-embed">
 	</div>
 </template>
 
@@ -8,15 +8,20 @@ export default {
   name: "TwitchPlayer",
   mounted() {
     var options = {
-      width: 400,
-      height: 300,
-      channel: "dannyrbrown"
+      width: "100%",
+      height: "100%",
+      channel: "dannyrbrown",
+      layout: "video"
     };
-    var player = new Twitch.Player("twitch-player", options);
-    player.setVolume(0.5);
+
+    new Twitch.Embed("twitch-embed", options);
   }
 };
 </script>
 
 <style scoped>
+#twitch-embed {
+  width: 100%;
+  height: 100%;
+}
 </style>

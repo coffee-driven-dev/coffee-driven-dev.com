@@ -4,7 +4,7 @@
 		<input type="text" name="email" id="tlemail" placeholder="ex. robotluv@gmail.com" />
 		<input type="hidden" value="1" name="embed"/>
 		<button type="submit">Subscribe</button>
-		<label for="tlemail">Want to join the conversation?</label>
+		<label for="tlemail">Join the conversation! 🚀</label>
 	</form>
 </template>
 
@@ -40,7 +40,7 @@ button {
 
 label {
   color: #fff;
-  margin-top: 3px;
+  margin-top: 7px;
   display: block;
 }
 
