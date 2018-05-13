@@ -84,7 +84,7 @@ export default {
     0 7px 6px rgba(0, 0, 0, 0.1), 0 11px 0 -1px #fff,
     0 12px 6px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
-  height: 166.08997px;
+  height: $card-deck-height;
   width: 144px;
   margin-bottom: 30px;
   background-position: center top;
