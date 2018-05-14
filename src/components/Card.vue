@@ -16,24 +16,21 @@ export default {
 .card {
   border-radius: 25px;
   margin-top: -100px;
-  // left/right: 0
-  // Because content may need to touch edges, but
-  // rarely ever need to touch top/bottom
   padding: 30px 0;
   background: #fff;
-  width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+
+  // Stretch to edges
+  // todo: may not be optimal for all cards; just home card
+  margin-left: -$row-padding;
+  margin-right: -$row-padding;
+  width: calc(100% + #{$row-padding} + #{$row-padding});
 }
 
 @media (max-width: $SM) {
   .card {
     border-radius: 0;
-    width: calc(100% + #{$row-padding} + #{$row-padding});
     box-shadow: none;
-
-    // Stretch to edges
-    margin-left: -$row-padding;
-    margin-right: -$row-padding;
   }
 }
 </style>
