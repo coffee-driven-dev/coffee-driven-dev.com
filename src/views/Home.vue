@@ -10,6 +10,7 @@
 			<cdd-card-deck-row />
 
 			<h2>Medium Posts</h2>
+			<cdd-medium-feed />
 		</cdd-card>
 	  </cdd-row>
   </div>
@@ -19,13 +20,15 @@
 import CddRow from "@components/Row.vue";
 import CddCard from "@components/Card.vue";
 import CddCardDeckRow from "@components/CardDeckRow.vue";
+import CddMediumFeed from "@components/MediumFeed.vue";
 
 export default {
   name: "home",
   components: {
     CddCard,
     CddCardDeckRow,
-    CddRow
+    CddRow,
+    CddMediumFeed
   }
 };
 </script>
