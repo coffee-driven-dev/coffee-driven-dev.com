@@ -8,8 +8,8 @@
 				</div>
 			</router-link>
 			<div class="menu">
-				<router-link to="about">About Us</router-link>
-				<a href="https://www.twitch.tv/dannyrbrown" class="primary">Follow Us</a>
+				<router-link to="about">About</router-link>
+				<a href="https://www.twitch.tv/dannyrbrown" class="primary">Susbscribe</a>
 			</div>
 		</cdd-row>
 	</nav>

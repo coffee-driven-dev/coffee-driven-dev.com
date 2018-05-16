@@ -18,7 +18,7 @@
 		</a>
 
 		<a href="https://medium.com/coffee-driven-dev" class="read-more">
-			Checkout all of our articles on Medium
+			Check out our other articles on Medium
 		</a>
 		
 	</div>
@@ -99,7 +99,7 @@ a:visited {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 0.25rem;
-  background-color: #fff;
+  background-color: lighten(#e9f6f7, 3%);
   margin: 0 10px;
 }
 
@@ -134,7 +134,7 @@ label {
 }
 
 h3 {
-  color: #38c172;
+  color: $green;
   margin: 0;
   margin-bottom: 0.25rem;
 }
@@ -162,12 +162,12 @@ a.read-more {
   flex-direction: column;
   justify-content: center;
   //
-  color: #38c172;
+  color: $green;
   text-align: center;
   text-decoration: underline;
   max-width: 200px;
   &:hover {
-    color: darken(#38c172, 10%);
+    color: darken($green, 10%);
   }
 }
 
