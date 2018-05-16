@@ -71,7 +71,7 @@ export default {
 body {
   background: $background;
   color: #5c5c5c;
-  min-width: 400px; // TODO: Re-evaluate. Can we do 420?
+  min-width: 320px; // iPhone 5/SE
   overflow-x: hidden;
 }
 
