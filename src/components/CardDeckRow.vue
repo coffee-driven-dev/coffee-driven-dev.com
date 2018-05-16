@@ -91,6 +91,7 @@ export default {
 .card-deck-row {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .navigate-arrow {
