@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/img/medium/2018-05/adding-a-list-of-medium-posts-to-your-personal-website/postman.jpg"
   },
   {
-    "revision": "83b04691d5dbcfe9b73347c4e73707ce",
+    "revision": "577b91cad92f53f156b0c05b790c150d",
     "url": "/index.html"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/img/medium/2018-05/adding-a-list-of-medium-posts-to-your-personal-website/postman.png"
   },
   {
-    "revision": "684a9ff8a891180e02f3",
-    "url": "/js/app.684a9ff8.js"
+    "revision": "5978a64688bcdbe6b8d5",
+    "url": "/js/app.5978a646.js"
   },
   {
     "revision": "bb41d6d80c1fdaad6874",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/img/medium/2018-05/adding-a-list-of-medium-posts-to-your-personal-website/2500.png"
   },
   {
-    "revision": "684a9ff8a891180e02f3",
-    "url": "/css/app.d39cf9ea.css"
+    "revision": "5978a64688bcdbe6b8d5",
+    "url": "/css/app.1679c9e6.css"
   },
   {
     "revision": "dd3fb19d328afed70006bbb29a4cb994",
