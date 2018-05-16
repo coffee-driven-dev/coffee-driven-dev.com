@@ -52,4 +52,17 @@ input {
   font-size: 18px;
   min-width: 200px;
 }
+
+@media (max-width: $XX) {
+  input,
+  button,
+  label {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 3px;
+  }
+}
 </style>
