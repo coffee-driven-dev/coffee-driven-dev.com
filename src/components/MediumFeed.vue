@@ -16,6 +16,10 @@
 				</div>
 			</div>
 		</a>
+
+		<a href="https://medium.com/coffee-driven-dev" class="read-more">
+			Checkout all of our articles on Medium
+		</a>
 		
 	</div>
 </template>
@@ -83,8 +87,9 @@ a:visited {
     flex-basis: auto;
     flex-grow: 1;
     flex-shrink: 1;
-    overflow-x: auto;
+    overflow-x: hidden;
     margin: 0;
+    padding: 0 10px;
   }
 }
 
@@ -96,11 +101,11 @@ a:visited {
   border-radius: 0.25rem;
   background-color: #fff;
   margin: 0 10px;
+}
 
-  img {
-    max-width: 100%;
-    border-style: solid;
-  }
+img {
+  max-width: 100%;
+  border-style: solid;
 }
 
 .card-body {
@@ -148,6 +153,57 @@ h5 {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+a.read-more {
+  // Vertical center
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //
+  color: #38c172;
+  text-align: center;
+  text-decoration: underline;
+  max-width: 200px;
+  &:hover {
+    color: darken(#38c172, 10%);
+  }
+}
+
+// From vertical to horizontal cards on mobile
+@media (max-width: $SM) {
+  .card-row {
+    flex-direction: column;
+  }
+  a {
+    flex-grow: 1;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  img {
+    max-width: 150px;
+  }
+
+  .card-body {
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+
+  a.read-more {
+    max-width: 100%;
+    margin: 25px 0 10px 0;
+  }
+}
+
+@media (max-width: $ZZ) {
+  .card-media {
+    display: none;
   }
 }
 </style>
