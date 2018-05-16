@@ -24,7 +24,7 @@
 
 	<!-- PAGE -->
 	<!-- <cdd-app-navigation /> -->
-	<transition name="page">
+	<transition name="page" mode="out-in">
     	<router-view/>
 	</transition>
 
@@ -85,18 +85,14 @@ body {
 /*
  * PAGE Transition
 */
-.page-enter-active {
+.page-enter-active,
+.page-leave-active {
   transition: opacity 0.25s ease-out;
   transition-delay: 0.3s;
 }
 
-.page-leave-active {
-  transition: opacity 0.25s ease-in;
-  transition-delay: 0.3s;
-}
-
 .page-enter,
-.page-leave-active {
+.page-leave-to {
   opacity: 0;
 }
 
