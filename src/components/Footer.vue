@@ -1,11 +1,7 @@
 <template>
 	<footer class="container-footer">
-		<router-link to="/press">About</router-link>
-		<router-link to="/press">Support</router-link>
-		<router-link to="/press">Terms</router-link>
-		<router-link to="/press">Q Solutions</router-link>
-		<a href="https://twitch.com">Twitch</a>
-		<a href="https://mixer.com">Mixer</a>
+		<router-link to="/contact">Contact</router-link>
+		<router-link to="/join-our-network">Join Network</router-link>
 	</footer>
 </template>
 
