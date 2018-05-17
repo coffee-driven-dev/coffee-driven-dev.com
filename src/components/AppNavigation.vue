@@ -1,6 +1,6 @@
 <template>
     <!--we use the page to update the class with a conditional-->
-	<svg :class="{ 'active' : (page === 'about') }" xmlns="http://www.w3.org/2000/svg" width="447" height="442" viewBox="0 0 447 442">
+	<svg :class="{ 'active' : (page === 'danny') }" xmlns="http://www.w3.org/2000/svg" width="447" height="442" viewBox="0 0 447 442">
 		<!-- we use the transition group component, we need a g tag because it’s SVG-->
 		<transition-group name="layout" tag="g">
 		<rect class="items rect" ref="rect" key="rect" width="171" height="171"/>
@@ -16,12 +16,18 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+// import { mapState } from 'vuex';
 
 export default {
-	name: 'AppNavigation',
-	computed: mapState(['page'])
-}
+  name: "AppNavigation",
+  props: {
+    page: {
+      type: String,
+      default: "danny"
+    }
+  }
+  // computed: mapState(['page'])
+};
 </script>
 
 <style lang="scss" scoped>
@@ -34,13 +40,13 @@ export default {
 }
 
 svg {
-  fill: #A8DADC;
+  fill: #a8dadc;
 }
 
 .active {
-  fill: #E63946;
-  .rect { 
-    transform: translate3d(0, 30px, 0); 
+  fill: #e63946;
+  .rect {
+    transform: translate3d(0, 30px, 0);
   }
   .circ {
     transform: translate3d(30px, 0, 0) scale(0.5);
