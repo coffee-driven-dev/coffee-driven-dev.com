@@ -10,7 +10,7 @@
 		<transition name="fade">
 			<cdd-row v-if="!isNavCollapsed" class="magic">
 				<div class="hero-container">
-					<h1 style="margin: 10px 0; color: #FFF; font-size: 27px; line-height: 60px;">
+					<h1>
 						Live social coding; join the 💬, level up your 💻, sip a bit of ☕ 
 					</h1>
 					<cdd-tiny-letter-form />
